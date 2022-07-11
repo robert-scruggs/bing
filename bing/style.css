@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    cursor: pointer;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    background: url('./pics/pexels-nout-gons-378570.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+/* nav */
+.nav{
+    color: white;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    font-family: monospace;
+}
+
+.nav ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 2%;
+    padding-right: 5%;
+    
+}
+
+#dots{
+    cursor: pointer;
+}
+
+.nav ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* email */
+
+.email{
+    width: 100%;
+    height: 100%;
+    padding-top: 2%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.email div{
+    padding-right: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email img{
+    width: 25px;
+    height: 25px;
+}
+
+.menu{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.menu img{
+    
+    background: white;
+}
+
+/*searchbar*/
+
+.search-bar{
+    width: 50%;
+    height: 50px;
+    border: 1px solid blanchedalmond;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+
+}
+
+
+.search-bar input{
+    width: 50%;
+    height: 100%;
+    margin-left: 25px;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    border: none;
+}
+
+.search-bar input:focus{
+    outline: none;
+}
+
+.images{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.images img{
+    width: 25px;
+    height: 25px;
+}
+
+.quiz{
+position: absolute;
+bottom: 25%;
+right: 25%;
+width: 200px;
+height: 200px;
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0;
+transition: 0.2s;
+
+
+}
+
+.quiz:hover{
+    opacity: 0.5;
+}
+
+.letter{
+    width: 75px;
+    height: 75px;
+    background-color: black;
+    color: white;
+    font-size: 48px;
+    border: 1px solid black;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.letter:hover{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background: black;
+    opacity: 0.8;
+}
+
+
+
+.sidebar{
+    position: absolute;
+    border: 1px solid black;
+    width: 50%;
+    height: 100vh;
+    right: -1000px;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    opacity: 0;
+    transition: 0.5s;
+
+}
+
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.sidebar ul li{
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.sidebar ul li::before{
+    content: "";
+    width: 0vw;
+    height: 1px;
+    background-color: grey;
+    position: absolute;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.sidebar ul li:hover:before{
+    width: 30vw;
+
+}
+
+@media (max-width: 700px) {
+    .sidebar{
+    opacity: 1;
+    right: 0;
+    }
+
+    .nav{
+        visibility: hidden;
+    }
+    .search-bar{
+    visibility: hidden;
+    }
+}
